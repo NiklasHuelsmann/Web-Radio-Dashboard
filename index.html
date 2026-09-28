@@ -10,11 +10,18 @@
         }
         body { font-family: sans-serif; background-color: var(--bg-color); background-image: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); background-attachment: fixed; color: var(--text-color); margin: 0; }
         #status-container { position: fixed; top: 10px; left: 10px; z-index: 1000; background: var(--card-bg); padding: 15px; border-radius: 8px; border: 1px solid #777; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        .header { background: var(--card-bg); padding: 15px 40px; border-bottom: 2px solid #333; display: flex; justify-content: flex-end; align-items: center; gap: 10px; }
+        
+        /* Header in einem dunklen, modernen Ton angepasst */
+        .header { background: #111827; padding: 15px 40px; border-bottom: 2px solid #374151; display: flex; justify-content: flex-end; align-items: center; gap: 10px; }
+        
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 30px; }
         .card { background: var(--card-bg); padding: 15px; border-radius: 8px; border: 3px solid transparent; cursor: grab; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; }
         .active-card { border: 3px solid #ef4444 !important; }
-        .btn-play { background: #00a67c; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; width: 100%; margin-top: 15px; font-weight: bold; }
+        
+        /* Buttons in ein schönes, kräftiges Dunkelgrün getauscht */
+        .btn-play { background: #047857; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; width: 100%; margin-top: 15px; font-weight: bold; }
+        .btn-play:hover { background: #065f46; }
+
         .star { position: absolute; top: 10px; right: 10px; font-size: 1.5rem; cursor: pointer; color: #facc15; }
         .delete-btn { position: absolute; top: 10px; left: 10px; font-size: 1.2rem; cursor: pointer; color: #ef4444; background: rgba(0,0,0,0.1); border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; }
         .status-badge { color: #ef4444; font-weight: bold; font-size: 0.8rem; margin-bottom: 5px; display: none; }
@@ -28,12 +35,12 @@
         <div id="status-dot" style="width: 12px; height: 12px; border-radius: 50%; background-color: gray;"></div>
         <span id="status-text" style="font-weight: bold;">Prüfe System...</span>
     </div>
-    <button onclick="window.open('https://radioadmin.laut.fm', '_blank', 'noopener')" style="width: 100%; padding: 8px; background: #00a67c; color: white; border: none; border-radius: 4px; cursor: pointer;">Login</button>
+    <button onclick="window.open('https://radioadmin.laut.fm', '_blank', 'noopener')" style="width: 100%; padding: 8px; background: #047857; color: white; border: none; border-radius: 4px; cursor: pointer;">Login</button>
 </div>
 
 <header class="header">
     <input type="text" id="searchInput" placeholder="Sender-Slug..." style="padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
-    <button onclick="addStation()" style="padding: 8px 16px; background: #00a67c; color: white; border: none; border-radius: 4px; cursor: pointer;">Hinzufügen</button>
+    <button onclick="addStation()" style="padding: 8px 16px; background: #047857; color: white; border: none; border-radius: 4px; cursor: pointer;">Hinzufügen</button>
 </header>
 
 <div class="grid" id="grid"></div>
